@@ -1,0 +1,31 @@
+[project]
+name = "mkdocs-djot"
+version = "0.1.0"
+description = "A MkDocs plugin to support Djot format"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "13m0n4de" }]
+requires-python = ">=3.10"
+dependencies = ["mkdocs>=1.6.1"]
+
+[project.entry-points."mkdocs.plugins"]
+djot = "mkdocs_djot.plugin:DjotPlugin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "mkdocs_djot.jotdown_py"
+
+[tool.uv]
+cache-keys = [
+    { file = "pyproject.toml" },
+    { file = "src/**/*.rs" },
+    { file = "Cargo.toml" },
+    { file = "Cargo.lock" },
+]
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[dependency-groups]
+dev = ["maturin>=1.9.6"]
