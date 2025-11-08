@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文](README.zh.md)
 
-A [MkDocs](https://github.com/mkdocs/mkdocs) plugin that lets you write docs in [Djot](https://djot.net/) markup.
+A [MkDocs](https://github.com/mkdocs/mkdocs) plugin that lets you write docs in [Djot](https://djot.net/) markup language.
 
 Since there's no Python Djot parser available, this plugin uses a mixed Rust/Python project, calling the [jotdown](https://github.com/hellux/jotdown) parser through [PyO3](https://github.com/pyo3/pyo3) bindings.
 
@@ -113,7 +113,7 @@ extra_css:
 
 extra_javascript:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js
-  - javascripts/init.js  # Contains: hljs.initHighlightingOnLoad();
+  - javascripts/init.js # Contains: hljs.highlightAll();
 
 markdown_extensions:
   - pymdownx.highlight:

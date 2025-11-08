@@ -113,7 +113,7 @@ extra_css:
 
 extra_javascript:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js
-  - javascripts/init.js # hljs.initHighlightingOnLoad();
+  - javascripts/init.js # 包含 hljs.highlightAll();
 
 markdown_extensions:
   - pymdownx.highlight:
