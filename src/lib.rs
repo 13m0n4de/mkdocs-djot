@@ -131,7 +131,7 @@ impl HeadingContext {
 
     fn start_heading(&mut self, metadata: &mut PageMetadata, level: u16, id: &str) {
         if !id.is_empty() {
-            metadata.anchors.push(id.to_lowercase());
+            metadata.anchors.push(id.to_string());
         }
 
         let idx = metadata.toc_builder.add_token(id.to_string(), level);
